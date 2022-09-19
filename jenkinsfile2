@@ -1,0 +1,15 @@
+#bring code from scm
+stages{
+    stage ("gitclone"){
+        git clone git@github.com:jamalkhan132/automation.git
+#pkg
+    stage("ci"){
+        zip -r name$Buld number .zip .
+    }
+#cd  
+    stage(deplament){
+        aws s3 cp name-$Build.number.zip
+    } 
+ #   
+
+}
