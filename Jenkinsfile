@@ -2,12 +2,12 @@
 pipeline {
 agent any
 stages{
-    stage("bring the code from scm"){   
-        steps{
+//     stage("bring the code from scm"){   
+//         steps{
             
-    # sh 'git@github.com:jamalkhan132/automation.git'
-}
-    }
+//     # sh 'git@github.com:jamalkhan132/automation.git'
+// }
+//     }
 stage("make pkg"){
     steps{
    sh 'zip -r artifactory-ci$BUILD_NUMBEE.zip *'
